@@ -110,6 +110,8 @@ var reglesPicoloApero = [{"regle": "Le premier qui enlève 2 vêtements distribu
                          {"regle":"Question : &&, avec qui aimerais-tu avoir une relation sexuelle ?", "joueurs":1},
                          {"regle":"Tous ceux qui ont déja pissé dans une piscine boivent ## gorgées.", "joueurs":0},
                          {"regle":"Tous ceux qui ont déja chié dans l'océan boivent ## gorgées.", "joueurs":0},
+                         {"regle":"The floor is lava ! Le dernier a touché le sol boit ## gorgées.", "joueurs":0},
+                         {"regle":"", "joueurs":0},
                    ];
 
 var reglesPicolo100 = [{"regle":"&& boit ## de gorgées a chaque tour jusqu'a ce que tu sois appelé à nouveau.", "joueurs":0},
