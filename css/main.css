@@ -1,0 +1,35 @@
+.hidden{
+    display: none;
+}
+.visible{
+    visibility: hidden;
+}
+html, body{
+    background: linear-gradient(15deg, rgba(131,155,226,1) 7%, rgba(96,145,247,1) 45%, rgba(0,68,112,1) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    overflow: hidden;
+    font-size: 20px;
+}
+.main{
+    height: 100%;
+    width: 100%;
+}
+h1{
+    text-align: center;
+    font-family: badabb, sans-serif;
+    color: #ebb434;
+    font-size: 4em;
+}
+h2{
+    text-align: center;
+    font-family: badabb, sans-serif;
+    color: #ebb434;
+    font-size: 2em;
+}
+
+@font-face {
+font-family: 'badabb';
+src: url('../BADABB__.ttf') format('truetype');
+}

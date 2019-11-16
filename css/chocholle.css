@@ -1,0 +1,21 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin:0;
+    padding: 0;
+    overflow-y: auto;
+}
+.container{
+    margin: auto;
+    width: 80%;
+}
+.container, .fin{
+    margin: auto;
+    height: 70%;
+}
+.imageCarte{
+    height: 200px;
+    transition: 2s;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
