@@ -60,7 +60,6 @@ window.addEventListener("load", function(){
         DEBUG && console.log("*****************************");
         let aleatoire = entierAleatoire(rulesAutiliser.length-1);
         let regle = rulesAutiliser[aleatoire];
-//        DEBUG && console.log("nb : ", aleatoire, " regle : ", regle.regle," joueurs : ", regle.joueurs);
         
         let regleFinale ="";
         let joueurSelec = [];

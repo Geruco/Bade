@@ -1,4 +1,6 @@
+
 window.addEventListener("load", function(){
+    
 //    CLICK DES "LIENS"
     document.getElementById("1").addEventListener("click", function(){
         this.classList.toggle("clicked");
