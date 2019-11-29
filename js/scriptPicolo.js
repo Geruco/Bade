@@ -8,13 +8,16 @@ window.addEventListener("load", function(){
     var maxGorgee;
     //Regles par défaut = reglesPicolo;
     switch(difficulte){
-        case 1 : rulesAutiliser = reglesPicolo100;
+        case "1" : rulesAutiliser = reglesPicolo100;
+            console.log("Nb règle : ", rulesAutiliser.length);
             maxGorgee = 6;
             break;
-        case 2 : rulesAutiliser = reglesPicoloClaque;
+        case "2" : rulesAutiliser = reglesPicoloClaque;
+            console.log("Nb règle : ", rulesAutiliser.length);
             maxGorgee = 3;
             break;
         default: rulesAutiliser = reglesPicoloApero;
+            console.log("Nb règle : ", rulesAutiliser.length);
             maxGorgee = 3;
     }
     
@@ -72,6 +75,10 @@ window.addEventListener("load", function(){
                 joueurSelec.push(copieJoueur[aleatoire]);
                 DEBUG && console.log("joueurSelec : ", joueurSelec, aleatoire);
                 copieJoueur.splice(aleatoire, 1);
+            }
+            
+            if(regle.hasOwnProperty("linked")){
+                ajouterAntiRegle(regle, joueurSelec);
             }
             
             let textRegle = regle.regle;
@@ -159,4 +166,31 @@ window.addEventListener("load", function(){
         document.querySelector(".container").classList.toggle("hidden");
         document.querySelector(".fin").classList.toggle("hidden");
     }
+    
+    function ajouterAntiRegle(regle, joueur){
+        antiRegle.forEach(function(element){
+            if(element.preLinked == regle.linked){
+                DEBUG && console.log(element);
+                rulesAutiliser.push(element);
+            }
+        })
+//            let text = [];
+//            let regleFinale = "";
+//            while(regle.indexOf("&&")!= -1){
+//                let index = regle.indexOf("&&");
+//                let str = regle.split("&&");
+//                str.forEach(function(elem){
+//                    text.push(elem);
+//                })
+//                regle=regle.split("&&");
+//                DEBUG && console.log("textRegle : ", regle, " et text : ", text);
+//            }
+//            for(var i = 0; i<regle.length; i++){
+//                DEBUG && console.log(regleFinale);
+//                regle += text[i];
+//                regle += joueur;
+//                DEBUG && console.log("fin : ", regleFinale);
+//            }
+    }
+    
 });
