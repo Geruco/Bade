@@ -69,6 +69,12 @@ src: url('../BADABB__.ttf') format('truetype');
     justify-content: center;
     margin-top: 5vh;
 }
+.flexCenter{
+    display: flex;
+    justify-content: center; 
+    margin-top: 15px;
+
+}
 .error{
     border: 1px solid red;
 }
@@ -78,15 +84,24 @@ src: url('../BADABB__.ttf') format('truetype');
 
 a{
     text-decoration:none;
-    color: #ebb434; 
 }
 .clicked{
     color: white;
     text-decoration: underline;
 }
 
-
-
+#DifficultForm{
+    display: flex;
+    flex-direction: column;
+}
+.choixDif{   
+    text-align: center;
+    width: 100vw;
+    height: 20vh;
+    line-height: 20vh;
+    font-size: 5rem;
+    font-family: 'badabb';
+}
 
 
 /******************************    CSS FORMULAIRE JOUEUR   *****************************************/
@@ -114,7 +129,15 @@ a{
     color: #fff;
   }
   
-
+  .continue-line__btn {
+    height: 70px;
+    width: auto;
+    border-radius: 15px;
+    padding: 0 25px;
+    background: #FFC107;
+    font-size: 50px;
+    color: #fff;
+  }
   
   /* List, list items, and list item buttons */
   
@@ -147,3 +170,14 @@ a{
     float: left;
     font-family: "Hind";
   }
+
+
+
+/****************************    CSS PICOLO    *************************************/
+
+.regle{
+    height: 50vh;
+    font-size: 50px;
+    padding: 5vh 5vw;
+    font-family: cursive;
+}

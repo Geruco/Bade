@@ -15,7 +15,7 @@
         </div>
                     
         <div class="main">
-            <h1><a href="index.html">BADE</a></h1>
+            <h1><a href="index.html" style="color: #ebb434;">BADE</a></h1>
             <h2>Boire a en Deverser l'Ethanol</h2>
             <div class="menu">
                 <ul class="mainMenu noStyle">
@@ -30,34 +30,22 @@
                                     <button class="submission-line__btn" onclick="addItem();">Add</button>
                                 </div>
                             </div>
-                            <div style="display: flex; justify-content: center; margin-top: 15px;">
+                            <div class="flexCenter">
                                 <!--  List, list items, and list item buttons  -->
                                 <ul id="list">
                                 </ul>
                             </div>
-                                <button type="button">Valider et continuer</button>
-                           
+                            <div class="flexCenter" >
+                                <button id="Valider" onclick="start();" type="button" class="continue-line__btn">Valider et continuer</button>
+                            </div>
                         </div>
-                        
-                        
-                        <!--
-                        <div class="players novisible">
-                            <p>Entrez les noms des joueurs :</p>
-                            <ul class="noStyle">
-                                <li><input type="text"/></li>
-                                <li><input type="text"/></li>
-                                <li><input type="text"/></li>
-                                <li><input type="text"/></li>
-                            </ul>
-                            <p class="hidden"></p>
-                            <button type="button">Ajouter un joueur</button>
-                            <button type="button">Valider et continuer</button>
-                        </div>-->
+
                         <div class="difficultePicolo novisible">
-                            <p>Choisissez le mode de difficulté :</p>
-                            <input type="radio" class="choixDif" name="diff" value="0" selected>Apero<br>
-                            <input type="radio" class="choixDif" name="diff" value="1">100°<br>
-                            <input type="radio" class="choixDif" name="diff" value="2">Claque<br>
+                            <div id="DifficultForm">
+                                <a style="background-color: cadetblue;" onclick="selectdifficult(this);" class="choixDif" name="diff" id="0">Apero</a>
+                                <a style="background-color: orangered;" onclick="selectdifficult(this);" class="choixDif" name="diff" id="1">100°</a>
+                                <a style="background-color: hotpink;" onclick="selectdifficult(this);" class="choixDif" name="diff" id="2">Claque</a>
+                            </div>
                         </div>
                     </div>
                     <li class="SelectGame" id="2"><a href="51.html">51</a></li>

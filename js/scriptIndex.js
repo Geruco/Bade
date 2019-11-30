@@ -1,25 +1,17 @@
+let parameter="";
 
-window.addEventListener("load", function(){
+window.onload= function(){
     
 //    CLICK DES "LIENS"
     document.getElementById("1").addEventListener("click", function(){
         this.classList.toggle("clicked");
         document.querySelector(".players").classList.toggle("novisible");
-        document.querySelector(".difficultePicolo").classList.toggle("novisible");
         document.querySelectorAll('.SelectGame').forEach(element => {
             element.classList.toggle("novisible");
         });
-        //document.querySelector(".players").querySelectorAll("p")[1].innerHTML = "1";
     });
-//    CLICK DES BOUTONS
-     /*document.querySelector(".players").querySelectorAll("button")[0].addEventListener("click", function(){
-         let li=document.createElement("li");
-         let input = document.createElement("input");
-         input.setAttribute("type", "text");
-         li.appendChild(input);
-         document.querySelector(".players").querySelector("ul").appendChild(li);
-     });*/
-    document.querySelector(".players").querySelectorAll("button")[1].addEventListener("click", function(){
+/*
+    document.getElementById("Valider").addEventListener("click", function(){
         //Vérification si suffisamment de joueurs
         let valideNom = 0;
         document.querySelector(".players").querySelectorAll("input").forEach(function(input){
@@ -77,13 +69,38 @@ window.addEventListener("load", function(){
                 document.querySelector(".players").appendChild(p);
             }
         }
-    });
-})
+    });*/
+}
 
 
+function start(){
+    //Vérification si suffisamment de joueurs
+    if(document.getElementById("list").childElementCount >= 2){
+        let noms = [];
 
+        document.querySelectorAll(".list__item").forEach(element =>{
+            noms.push(element.childNodes[1].innerText);
+        });
+        
+        noms.forEach(function(nom){
+            parameter+="_"+nom;
+            console.log(parameter);
+        });
+        console.log("final : ", parameter);
+        document.querySelector(".players").classList.toggle("novisible");
+        document.querySelector(".difficultePicolo").classList.toggle("novisible");
+    
+    }
+    else
+        alert("Veuiller entrer au moins 2 joueurs");
 
+    
+};
 
+function selectdifficult(element){
+    //        AJOUT D'ADRESSE HTML
+    window.location.href = "picolo.html#"+element.id+"?"+parameter;
+};
 ////////////////    JS FORMULAIRE JOUEUR    ////////////////
      // ADDING A NEW ITEM TO THE LIST
     
@@ -94,7 +111,7 @@ function addItem(){
         var input = document.getElementById('submission-line__input').value;
         // If the input text field isn't empty, add it to the list as a new item
         if (input != "") {
-          document.getElementById('list').innerHTML += '<li class="list__item"><a class="list__delete-btn" onclick="this.parentNode.remove();">✘</a>' + input + '</li>';
+          document.getElementById('list').innerHTML += '<li class="list__item"><a class="list__delete-btn" onclick="this.parentNode.remove();">✘</a><p>' + input + '</p></li>';
         }
         // Clear the input text field
         document.getElementById('submission-line__input').value = "";
