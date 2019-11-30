@@ -14,9 +14,7 @@ html, body{
     height: 100vh;
     width: 100vw;
 }
-.main{
 
-}
 h1{
     text-align: center;
     font-family: badabb, sans-serif;
@@ -27,7 +25,7 @@ h1{
 }
 h2{
     text-align: center;
-    font-family: badabb, sans-serif;
+    font-family: 'badabb', sans-serif;
     color: #ebb434;
     font-size: 4em;
     letter-spacing: 5px;
