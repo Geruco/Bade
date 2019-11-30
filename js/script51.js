@@ -40,7 +40,7 @@ window.addEventListener("load", function(){
             document.querySelector(".regle").innerHTML = "Le 1 et / ou le 5 est sorti une seule fois. Vous devez boire <span color='red'>"+gorgees+"</span> !";
         else
             document.querySelector(".regle").innerHTML = "Le 1 et le 5 ne sont pas sorti une seule fois. Vous devez boire <span color='red'>"+gorgees+"</span> !";
-        let src = "../img/des/"+face1+".png";
+        let src = "img/des/"+face1+".png";
         document.querySelector(".imageDe1").setAttribute("style", "background-image: url("+src+");");
         src = "img/des/"+face2+".png";
         document.querySelector(".imageDe2").setAttribute("style", "background-image: url("+src+");");
