@@ -4,18 +4,21 @@ window.addEventListener("load", function(){
 //    CLICK DES "LIENS"
     document.getElementById("1").addEventListener("click", function(){
         this.classList.toggle("clicked");
-        document.querySelector(".players").classList.toggle("visible");
-        document.querySelector(".difficultePicolo").classList.toggle("visible");
-        document.querySelector(".players").querySelectorAll("p")[1].innerHTML = "1";
+        document.querySelector(".players").classList.toggle("novisible");
+        document.querySelector(".difficultePicolo").classList.toggle("novisible");
+        document.querySelectorAll('.SelectGame').forEach(element => {
+            element.classList.toggle("novisible");
+        });
+        //document.querySelector(".players").querySelectorAll("p")[1].innerHTML = "1";
     });
 //    CLICK DES BOUTONS
-     document.querySelector(".players").querySelectorAll("button")[0].addEventListener("click", function(){
+     /*document.querySelector(".players").querySelectorAll("button")[0].addEventListener("click", function(){
          let li=document.createElement("li");
          let input = document.createElement("input");
          input.setAttribute("type", "text");
          li.appendChild(input);
          document.querySelector(".players").querySelector("ul").appendChild(li);
-     });
+     });*/
     document.querySelector(".players").querySelectorAll("button")[1].addEventListener("click", function(){
         //Vérification si suffisamment de joueurs
         let valideNom = 0;
@@ -76,3 +79,29 @@ window.addEventListener("load", function(){
         }
     });
 })
+
+
+
+
+
+////////////////    JS FORMULAIRE JOUEUR    ////////////////
+     // ADDING A NEW ITEM TO THE LIST
+    
+      // Define the callback function
+function addItem(){
+    
+        // Declare a variable to capture the input text value
+        var input = document.getElementById('submission-line__input').value;
+        // If the input text field isn't empty, add it to the list as a new item
+        if (input != "") {
+          document.getElementById('list').innerHTML += '<li class="list__item"><a class="list__delete-btn" onclick="this.parentNode.remove();">✘</a>' + input + '</li>';
+        }
+        // Clear the input text field
+        document.getElementById('submission-line__input').value = "";
+      
+    };
+
+
+    
+    // MAKING LIST ITEMS SORTABLE
+
