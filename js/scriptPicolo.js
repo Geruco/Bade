@@ -1,4 +1,4 @@
-window.addEventListener("load", function(){
+function loadPicollo(){
     var DEBUG = false;
     
     var difficulte = getDifficulte();
@@ -45,7 +45,7 @@ window.addEventListener("load", function(){
     function nomsJoueurs(){
         let joueurs = [];
         let url = window.location.href;
-        url = url.substring(url.indexOf("_"));
+        url = url.substring(url.indexOf("?"));
         while(url.indexOf("_")!= -1){
             let index =  url.indexOf("_")+1;
             let split = url.substring(index);
@@ -193,4 +193,4 @@ window.addEventListener("load", function(){
 //            }
     }
     
-});
+}

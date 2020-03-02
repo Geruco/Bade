@@ -1,4 +1,4 @@
-window.addEventListener("load", function(){
+function load51(){
     
     tirerDe();
     
@@ -48,4 +48,4 @@ window.addEventListener("load", function(){
     function entierAleatoire(max){
         return Math.floor(Math.random() * (max - 1 + 1)) + 1;
     }
-});
+}

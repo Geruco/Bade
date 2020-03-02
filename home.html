@@ -1,0 +1,39 @@
+<div class="pop">
+</div>
+<div class="main">
+    <div class="menu">
+        <ul class="mainMenu noStyle">
+            <li class="SelectGame" id="0"><a href="#chocholle-">Chocholle</a></li>
+            <li class="SelectGame" id="1"><a>Picolo</a></li>
+            <div id="FormulaireJoueur">
+                <div class="players novisible">
+                    <!--  Input and "add" button  -->
+                    <div id="inputForm">
+                        <div style="width: 75vw;padding: 10px; display: flex; justify-content: space-between;">
+                            <input id="submission-line__input" type="text" maxlength="20" placeholder="Enter new Player...">
+                            <button class="submission-line__btn" onclick="addItem();">Add</button>
+                        </div>
+                    </div>
+                    <div class="flexCenter">
+                        <!--  List, list items, and list item buttons  -->
+                        <ul id="list">
+                        </ul>
+                    </div>
+                    <div class="flexCenter" >
+                        <button id="Valider" onclick="start();" type="button" class="continue-line__btn">Valider et continuer</button>
+                    </div>
+                </div>
+
+                <div class="difficultePicolo novisible">
+                    <div id="DifficultForm">
+                        <a style="background-color: cadetblue;" onclick="selectdifficult(this);" class="choixDif" name="diff" id="0">Apero</a>
+                        <a style="background-color: orangered;" onclick="selectdifficult(this);" class="choixDif" name="diff" id="1">100°</a>
+                        <a style="background-color: hotpink;" onclick="selectdifficult(this);" class="choixDif" name="diff" id="2">Claque</a>
+                    </div>
+                </div>
+            </div>
+            <li class="SelectGame" id="2"><a href="#cinquante-">51</a></li>
+        </ul>
+
+    </div>
+</div>

@@ -1,4 +1,4 @@
-window.addEventListener("load", function(){
+function loadChocholle(){
     
     var cartePassee = [];
     var jeuDeCarteAutiliser = cartes;
@@ -45,4 +45,4 @@ window.addEventListener("load", function(){
         document.querySelector(".jeu").classList.toggle("hidden");
         document.querySelector(".fin").classList.toggle("hidden");
     }
-});
+}

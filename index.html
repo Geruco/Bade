@@ -6,53 +6,29 @@
         <title>Buvons à en pisser de l'éthanol</title>
         <link rel="stylesheet" href="css/main.css">
         <link href='https://fonts.googleapis.com/css?family=Hind:300,400' rel='stylesheet' type='text/css'>
+
+        <script src="js/jquery.js"></script>
         <script type="application/javascript" src="js/scriptIndex.js"></script>
+        <script type="application/javascript" src="js/ajax.js"></script>
+        <script type="application/javascript" src="main.js"></script>
+
+        <!-- <script src="https://kit.fontawesome.com/c9b7945c7c.js" crossorigin="anonymous"></script> -->
+        <script type="application/javascript" src="js/rules.js"></script>
+        <script type="application/javascript" src="js/scriptChocholle.js"></script>
+        <script type="application/javascript" src="js/scriptPicolo.js"></script>
+        <script type="application/javascript" src="js/script51.js"></script>
+
     </head>
 
     <body>
-        
-        <div class="pop">
-        </div>
-                    
-        <div class="main">
-            <h1><a href="index.html" style="color: #ebb434;">BADE</a></h1>
-            <h2>Boire a en Deverser l'Ethanol</h2>
-            <div class="menu">
-                <ul class="mainMenu noStyle">
-                    <li class="SelectGame" id="0"><a href="chocholle.html">Chocholle</a></li>
-                    <li class="SelectGame" id="1"><a>Picolo</a></li>
-                    <div id="FormulaireJoueur">
-                        <div class="players novisible">
-                            <!--  Input and "add" button  -->
-                            <div id="inputForm">
-                                <div style="width: 75vw;padding: 10px; display: flex; justify-content: space-between;">
-                                    <input id="submission-line__input" type="text" maxlength="20" placeholder="Enter new Player...">
-                                    <button class="submission-line__btn" onclick="addItem();">Add</button>
-                                </div>
-                            </div>
-                            <div class="flexCenter">
-                                <!--  List, list items, and list item buttons  -->
-                                <ul id="list">
-                                </ul>
-                            </div>
-                            <div class="flexCenter" >
-                                <button id="Valider" onclick="start();" type="button" class="continue-line__btn">Valider et continuer</button>
-                            </div>
-                        </div>
 
-                        <div class="difficultePicolo novisible">
-                            <div id="DifficultForm">
-                                <a style="background-color: cadetblue;" onclick="selectdifficult(this);" class="choixDif" name="diff" id="0">Apero</a>
-                                <a style="background-color: orangered;" onclick="selectdifficult(this);" class="choixDif" name="diff" id="1">100°</a>
-                                <a style="background-color: hotpink;" onclick="selectdifficult(this);" class="choixDif" name="diff" id="2">Claque</a>
-                            </div>
-                        </div>
-                    </div>
-                    <li class="SelectGame" id="2"><a href="51.html">51</a></li>
-                </ul>
-                
-            </div>
-        </div>
+    <header>
+        <h1><a href="index.html" style="color: #ebb434;">BADE</a></h1>
+        <h2>Boire A en Deverser l'Ethanol</h2>
+    </header>
+
+    <div id="content"></div>
+    <div id="footer"></div>
 
     </body>
 

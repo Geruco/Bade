@@ -1,6 +1,6 @@
 let parameter="";
 
-window.onload= function(){
+function loadIndex(){
     
 //    CLICK DES "LIENS"
     document.getElementById("1").addEventListener("click", function(){
@@ -99,7 +99,7 @@ function start(){
 
 function selectdifficult(element){
     //        AJOUT D'ADRESSE HTML
-    window.location.href = "picolo.html#"+element.id+"?"+parameter;
+    window.location.hash = "picolo-"+element.id+"?"+parameter;
 };
 ////////////////    JS FORMULAIRE JOUEUR    ////////////////
      // ADDING A NEW ITEM TO THE LIST
